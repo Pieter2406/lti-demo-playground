@@ -1,0 +1,51 @@
+<html>
+
+<head>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <form id="ltiForm"
+        action="http://localhost:3000/login"
+        method="POST"
+        target="testFrame">
+    <input name="iss"
+           type="hidden"
+           value="http://localhost:2020">
+    <input name="target_link_uri"
+           type="hidden"
+           value="http://localhost:3000">
+    <input name=""
+           type="hidden"
+           value="">
+    <input name=""
+           type="hidden"
+           value="">
+  </form>
+  <button form="ltiForm"
+          type="submit"> SUBMIT</button>
+  <button onclick="initiateLogin()">
+    InitiateLogin
+  </button>
+
+  <code id="codeBlock">
+
+  </code>
+
+  <iframe id="testFrame"></iframe>
+</body>
+
+<script>
+  async function initiateLogin() {
+    const result = await axios.post('http://localhost:3000/login', {
+      iss: 'http://localhost:2020',
+      target_link_uri: 'http://localhost:3000',
+      login_hint: '1',
+      lti_message_hint: '377',
+    })
+    console.log(result);
+    document.getElementById('codeBlock').innerText = (result.request.responseURL.split('&').join('\n'));
+  }
+</script>
+
+</html>

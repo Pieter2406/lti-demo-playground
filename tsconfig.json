@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"strictPropertyInitialization": false,
+		"sourceMap": true,
+		"module": "commonjs",
+		"target": "esnext",
+		"esModuleInterop": true,
+		"moduleResolution": "node",
+		"outDir": "",
+		"resolveJsonModule": true,
+		"rootDir": "./"
+	},
+	"exclude": ["public", "node_modules"]
+}
