@@ -12,7 +12,7 @@
     "axios": "^0.19.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "ltijs": "^3.6.2",
     "ltijs-postgresql": "^1.2.0",
     "mongodb": "^3.5.6",
